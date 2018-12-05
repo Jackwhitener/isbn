@@ -10,4 +10,7 @@ class My_test < Minitest::Test
 	def test_fortrue
 		assert_equal(true,checkten('7421394761'))
 	end
+	def test_forinvalid
+		assert_equal(false,checkten('877195x869'))
+	end
 end
