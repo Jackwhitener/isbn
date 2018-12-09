@@ -13,4 +13,7 @@ class My_test < Minitest::Test
 	def test_forinvalid
 		assert_equal(false,checkten('877195x869'))
 	end
+	def test_for_another_valid
+		assert_equal(true, checkten("877195869x"))
+	end
 end

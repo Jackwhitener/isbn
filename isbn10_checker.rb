@@ -24,6 +24,9 @@ def checkten(number)
 	end
 	p "This is sum before modulus 11: #{sum}"
 	sum = sum % 11
+	if sum == "10"
+		sum == "x"
+	end
 	p "This is sum after modulus 11: #{sum}"
 	p "This is the last number: #{number.last}"
 	p number
