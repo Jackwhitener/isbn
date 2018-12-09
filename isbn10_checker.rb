@@ -2,6 +2,7 @@ def checkten(number)
 	valid = false
 	currentsum = 0
 	sum = 0
+	number = number.tr("-", "")
 	number = number.split('')
 	p "number.length: #{number.length}"
 	if number.length == 10

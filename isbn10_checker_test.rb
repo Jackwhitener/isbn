@@ -16,4 +16,7 @@ class My_test < Minitest::Test
 	def test_for_another_valid
 		assert_equal(true, checkten("877195869x"))
 	end
+	def test_for_a_different_valid
+		assert_equal(true,checkten("0-321-14653-0"))
+	end
 end
