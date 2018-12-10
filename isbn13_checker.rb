@@ -5,11 +5,13 @@ def numberlengththirteen(number)
 	number = number.split('')
 	number.each_with_index do |digit, ind|
 		digit = digit.to_i
+	unless digit == number.last
 		if ind.odd?
 			sum = sum + (digit * 3)
 		elsif ind.even?
 			sum += sum + (digit * 1)
 		end
+	end
 		puts "This is the sum at #{digit}: #{sum}"
 	end
 	puts "This is the result: #{(10 - (sum % 10)) % 10}"
