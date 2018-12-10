@@ -17,4 +17,8 @@ class My_test < Minitest::Test
 		variable = "978 0 471 48648 0"
 		assert_equal(true,checkthirteen(numberlengththirteen(variable),variable))
 	end
+	def test_true_dashes
+		variable = "978-0-471-48648-0"
+		assert_equal(true,checkthirteen(numberlengththirteen(variable),variable))
+	end
 end
