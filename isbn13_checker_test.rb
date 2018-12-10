@@ -25,4 +25,8 @@ class My_test < Minitest::Test
 		variable = "thismightbrek"
 		assert_equal(false,checkthirteen(numberlengththirteen(variable),variable))
 	end
+	def test_for_non_zero_confirm
+		variable = "9780062801975"
+		assert_equal(true,checkthirteen(numberlengththirteen(variable), variable))
+	end
 end
