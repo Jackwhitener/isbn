@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="css/style.css">
+<h1>
+The results are in:<br>
+</h1>
+<body>
+The ISBN <%= isbntype %> number, <%= number %>, you entered is... <br>
+</body>
+<div>
+<% if valid == 'true' %>
+VALID!<br>
+<% elsif valid == 'false'%>
+INVALID!<br>
+<%else%>
+CONFUSING!<br>
+<%end%>
+</div>
+<input id="buttons" type = "button" value = "Back" onClick = "location.href='/'">

@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="css/style.css">
+<h1>
+Enter your ISBN 10, or 13 <br>
+</h1>
+<body>
+<form method = 'post' action = '/result'>
+	<input type='number' name='number' value='' min='1'required><br>
+	<input type='radio' name='isbntype' value='13' checked> ISBN 13 <br>
+	<input type='radio' name='isbntype' value='10'> ISBN 10 <br>
+	<input type='submit' value='Submit'>
+</form>
+</body>
