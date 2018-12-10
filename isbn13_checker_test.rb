@@ -5,6 +5,16 @@ class My_test < Minitest::Test
 		assert_equal(1,1)
 	end
 	def test_true
-		assert_equal(true,checkthirteen("9780470059029"))
+		variable = "9780471486480"
+		assert_equal(true,checkthirteen(numberlengththirteen(variable),variable))
+	end
+	def test_false
+		variable = "9999999999999"
+
+		assert_equal(false, checkthirteen(numberlengththirteen(variable),variable))
+	end
+	def test_true_again
+		variable = "978 0 471 48648 0"
+		assert_equal(true,checkthirteen(numberlengththirteen(variable),variable))
 	end
 end
