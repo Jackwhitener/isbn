@@ -1,8 +1,6 @@
 def numberlengththirteen(number)
 	sum = 0
-	number = number.tr("-", "")
-	number = number.tr(" ", "")
-	number = number.split('')
+	number = number.tr("a-w", "").tr("y-z", "").gsub("-", "").gsub(" ", "").each_char.to_a
 	number.each_with_index do |digit, ind|
 		digit = digit.to_i
 		p ind
@@ -12,8 +10,8 @@ def numberlengththirteen(number)
 		elsif ind.even?
 			sum = sum + (digit * 1)
 		end
-	end
 		puts "This is the sum at #{digit}: #{sum}"
+	end
 	end
 	puts "This is the result: #{(10 - (sum % 10)) % 10}"
 	return (10 - (sum % 10)) % 10

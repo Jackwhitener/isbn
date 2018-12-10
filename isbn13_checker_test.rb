@@ -33,8 +33,8 @@ class My_test < Minitest::Test
 		variable = "saidas@!21g10"
 		assert_equal(false,checkthirteen(numberlengththirteen(variable), variable))
 	end
-	def test_for_mixed_letnum_justlastt
+	def test_for_mixed_letnum_justlast
 		variable = "stringstring0"
-		assert_equal(false,checkthirteen(numberlengththirteen(variable), variable))
+		assert_equal(true,checkthirteen(numberlengththirteen(variable), variable))
 	end
 end
