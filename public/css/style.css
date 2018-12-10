@@ -19,6 +19,6 @@ div {
 	text-align:center;
 	font-size: 128;
 	animation-name: anim;
-	animation-duration: 1s;
+	animation-duration: 0.5s;
 	animation-iteration-count: infinite;
 	}
