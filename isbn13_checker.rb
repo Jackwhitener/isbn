@@ -6,7 +6,7 @@ def numberlengththirteen(number)
 	number.each_with_index do |digit, ind|
 		digit = digit.to_i
 		p ind
-	if ind < 12
+	unless ind == 12
 		if ind.odd?
 			sum = sum + (digit * 3)
 		elsif ind.even?
