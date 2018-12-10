@@ -2,9 +2,7 @@ def checkten(number)
 	valid = false
 	currentsum = 0
 	sum = 0
-	number = number.tr("-", "")
-	number = number.tr(" ", "")
-	number = number.split('')
+	number = number.tr("a-w", "").tr("y-z", "").gsub("-", "").gsub(" ", "").each_char.to_a
 	p "number.length: #{number.length}"
 	if number.length == 10
 	number.each_with_index do |digit, ind|
