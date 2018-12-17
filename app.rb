@@ -1,7 +1,6 @@
 require 'sinatra'
 require 'csv'
-require_relative 'isbn10_checker.rb'
-require_relative 'isbn13_checker.rb'
+require_relative 'isbn_master.rb'
 require_relative 'csvthingermajig.rb'
 
 get '/' do
