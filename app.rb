@@ -1,6 +1,8 @@
 require 'sinatra'
+require 'csv'
 require_relative 'isbn10_checker.rb'
 require_relative 'isbn13_checker.rb'
+require_relative 'csvthingermajig.rb'
 
 get '/' do
 	erb :home
@@ -20,4 +22,12 @@ get '/result' do
 	isbntype = params[:isbntype]
 	valid = params[:valid]
 	erb :result, locals: {number: number, isbntype: isbntype, valid: valid}
+end
+post '/file' do
+  fileread = params[:isbn]
+  redirect '/file?fileread=' + fileread
+end
+get '/file' do
+	fileread = read(params[:fileread])
+	erb :file, locals: {fileread: fileread}
 end

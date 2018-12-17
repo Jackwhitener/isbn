@@ -7,6 +7,12 @@ Enter your ISBN 10, or 13 <br>
 	<input type='text' name='number' value=''pattern="[xX0-9]{10,26}" required><br>
 	<input type='radio' name='isbntype' value='13' checked> ISBN 13 <br>
 	<input type='radio' name='isbntype' value='10'> ISBN 10 <br>
-	<input type='submit' value='Submit'>
+	<input type='submit' value='Submit'> <br>
+</form>
+<form action="/file" method="post">
+Use a CSV file
+	<br><br>
+	<input type="file" name="isbn" accept=".csv" required>
+	<input type="submit" value="Submit">
 </form>
 </body>

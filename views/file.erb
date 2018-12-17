@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="css/style.css">
+<h1>Submitted File:<br></h1>
+<% CSV.read('result.csv').each do |row| %>
+<%= row[0] %>:
+<div>
+	<%if row[1] == 'true'%>
+	Valid
+	<%else%>
+	Invalid
+	<%end%>
+<br>
+</div>
+<%end%>
