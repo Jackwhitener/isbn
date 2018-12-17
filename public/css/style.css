@@ -3,7 +3,11 @@
 	50% {color:yellow;}
 	100% {color:red;}
 }
-
+@keyframes banim {
+	0% {background-color:blue;}
+	50% {background-color:darkgreen;}
+	100% {background-color:blue;}
+}
 
 h1 {
 	background-color: green;
@@ -11,14 +15,18 @@ h1 {
 	color:white;
 	}
 body {
+	font-family: 'Impact', Charcoal, sans-serif;
 	text-align:center;
-	background-color: pink;
-	color:black;
-}
+	color:white;
+	font-size: 50;
+	background-color: blue;
+	animation-name: banim;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;}
 div {
 	text-align:center;
 	font-size: 128;
 	animation-name: anim;
-	animation-duration: 0.5s;
+	animation-duration: 5s;
 	animation-iteration-count: infinite;
 	}
