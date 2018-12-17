@@ -63,7 +63,7 @@ def checkthirteen(number, isbn)
 	puts "This is the isbn: #{isbn}"
 	puts "This is the last isbn: #{isbn.last}"
 	puts "This is the number: #{number}"
-	if number.to_s == isbn.last
+	if number.to_s == isbn.last && isbn.length == 13
 		valid = true
 	end
 	p "This is valid: #{valid}"
