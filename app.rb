@@ -1,8 +1,14 @@
 require 'sinatra'
 require 'csv'
+require 'aws-sdk'
+require 'json'
 require_relative 'isbn_master.rb'
 require_relative 'csvthingermajig.rb'
-
+load "./local_env.rb" 
+access_key_id = ENV['S3_KEY']
+secret_access_key = ENV['S3_SECRET']
+bucket = ENV['S3_BUCKET']
+file = ENV['S3_File']
 get '/' do
 	erb :home
 end
