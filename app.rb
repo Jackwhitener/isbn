@@ -1,14 +1,8 @@
 require 'sinatra'
 require 'csv'
-require 'aws-sdk'
-require 'json'
 require_relative 'isbn_master.rb'
 require_relative 'csvthingermajig.rb'
-load "./local_env.rb" 
-access_key_id = ENV['S3_KEY']
-secret_access_key = ENV['S3_SECRET']
-bucket = ENV['S3_BUCKET']
-file = ENV['S3_File']
+require_relative 'buckettest.rb'
 get '/' do
 	erb :home
 end
@@ -34,5 +28,12 @@ post '/file' do
 end
 get '/file' do
 	fileread = read(params[:fileread])
+	bucket = bucket_read
 	erb :file, locals: {fileread: fileread}
+end
+post '/read' do
+	redirect '/read?'
+end
+get '/read' do
+	erb :master
 end

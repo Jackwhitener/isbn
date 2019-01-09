@@ -1,11 +1,13 @@
-<link rel="stylesheet" href="css/style.css">
 <% require_relative 'buckettest.rb' %>
-<h1>Submitted File:<br></h1>
-<% CSV.read('result.csv').each do |row| %>
-	<% bucket_write(row) %>
+<link rel="stylesheet" href="css/style.css">
+<h1>
+THE MASTER FILE:
+</h1>
+<% file = bucket_read %>
+<% file.each do |row| %>
 <%= row[0] %>:
 <div>
-	<%if row[1] == 'true'%>
+	<% if row[1] == 'true' %>
 	Valid
 	<%else%>
 	Invalid
