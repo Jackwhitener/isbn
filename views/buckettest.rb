@@ -6,7 +6,7 @@ def bucket_read
     bucket = ENV['S3_BUCKET']
     region = ENV['S3_Region']
     s3 = Aws::S3::Client.new(region: region, access_key_id: ENV['S3_KEY'], secret_access_key: ENV['S3_SECRET'])
-    response = s3.get_object(bucket: bucket, key: ENV['S3_FILE'])
+    response = s3.get_object(bucket: bucket, key: ENV['S3_File'])
     file = CSV.parse(response.body)
     return file
 end
@@ -14,7 +14,7 @@ def bucket_write(newboy)
     bucket = ENV['S3_BUCKET']
     region = ENV['S3_Region']
     s3 = Aws::S3::Client.new(region: region, access_key_id: ENV['S3_KEY'], secret_access_key: ENV['S3_SECRET'])
-    response = s3.get_object(bucket: bucket, key: ENV['S3_FILE'])
+    response = s3.get_object(bucket: bucket, key: ENV['S3_File'])
     file = CSV.parse(response.body)
     file << newboy
     CSV.open("result.csv", 'wb') do |csv|
