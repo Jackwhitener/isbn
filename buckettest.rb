@@ -3,7 +3,7 @@ require 'csv'
 load "./local_ENV.rb" if File.exist?('./local_ENV.rb')
 arr = []
 def bucket_read
-    bucket = ENV['S3_Bucket']
+    bucket = ENV['S3_BUCKET']
     region = ENV['S3_Region']
     s3 = Aws::S3::Client.new(region: region, access_key_id: ENV['S3_KEY'], secret_access_key: ENV['S3_SECRET'])
     response = s3.get_object(bucket: bucket, key: ENV['S3_FILE'])
@@ -11,7 +11,7 @@ def bucket_read
     return file
 end
 def bucket_write(newboy)
-    bucket = ENV['S3_Bucket']
+    bucket = ENV['S3_BUCKET']
     region = ENV['S3_Region']
     s3 = Aws::S3::Client.new(region: region, access_key_id: ENV['S3_KEY'], secret_access_key: ENV['S3_SECRET'])
     response = s3.get_object(bucket: bucket, key: ENV['S3_FILE'])
