@@ -1,6 +1,6 @@
 require 'aws-sdk-s3'
 require 'csv'
-load "./local_ENV.rb" 
+load "./local_ENV.rb" if File.exist?('./local_ENV.rb')
 arr = []
 def bucket_read
     bucket = ENV['S3_Bucket']
